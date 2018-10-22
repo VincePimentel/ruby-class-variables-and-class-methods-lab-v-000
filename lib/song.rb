@@ -3,7 +3,7 @@ class Song
 
   @@count = 0
   @@artists = Array.new
-  #@@genres = Array.new
+  @@genres = Array.new
 
   def initialize(name, artist, genre)
     @name = name
