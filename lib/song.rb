@@ -27,6 +27,10 @@ class Song
   end
 
   def self.genre_count
-    Hash[@@genres.group_by(&:itself).map { |k,v| [k, v.size] }]
+    Hash[@@genres.group_by(&:itself).map { |genre, count| [genre, count.size] }]
+  end
+
+  def self.artist_count
+    Hash[@@artists.group_by(&:itself).map { |artist, count| [artist, count.size] }]
   end
 end
